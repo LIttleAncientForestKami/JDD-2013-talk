@@ -1,0 +1,52 @@
+/* slajd z tytułem prezentacji */
+section#presentation_title {
+  /* font, background? */
+}
+
+/* tytuł całej prezentacji */
+h1#presentation_title {
+  color: cyan;
+  /* font family, size, other important things */
+}
+
+/* wyróżnienia */
+strong.red {
+  color: red
+}
+
+/* borrowed from original impress.js demo style */
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+/* borrowed section end */
+
+/* spans for distinction */
+span.notoryczne .present {
+  color: blue
+}

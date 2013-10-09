@@ -38,6 +38,11 @@ cite {
   line-height: 20px;    
 }
 
+ul.small-unordered-list li {
+  font-size: 15px;
+  line-height: 20px;
+  color: blue;
+}
 
 
 
@@ -104,13 +109,13 @@ span.notoryczne .mark {
 
 /* flipbook styling */
 
-div#flipbook  {
+div#flipbook {
     overflow:hidden;
     width: 800px;
     height: 600px;
 }
 
-#flipbook .page{
+#flipbook .page {
     width: 750px;
     height: 550px;
     background-color: white;
@@ -158,8 +163,7 @@ div#flipbook  {
     -moz-box-shadow:inset 0 0 5px #666;
     -o-box-shadow:inset 0 0 5px #666;
     -ms-box-shadow:inset 0 0 5px #666;
-    box-shadow:inset 0 0 5px #666;
-    
+    box-shadow:inset 0 0 5px #666; 
 }
 
 #flipbook .even{

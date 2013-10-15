@@ -6,7 +6,8 @@ $(function () {
     var flipbook = $("#flipbook");
 
     flipbook.turn({
-      display: 'single'
+      display: 'double',
+      autoCebnter: true
     });
 
     setTimeout(function(){

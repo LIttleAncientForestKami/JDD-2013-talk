@@ -1,5 +1,5 @@
 /* slajd z tytułem prezentacji */
-section#presentation_title {
+section#start {
   /* font, background? */
 }
 
@@ -7,6 +7,30 @@ section#presentation_title {
 h1#presentation_title {
   color: cyan;
   /* font family, size, other important things */
+}
+
+/* obrazek o mnie */
+section#me {
+  width: 1300px;
+  height: 768px;
+}
+img#me {
+  display: block;
+  margin-left: auto;
+  margin-right : auto; 
+}
+
+/* podsumowanie */
+section.essence {
+ -moz-border-radius: 1em 4em 1em 4em;
+  border-radius: 1em 4em 1em 4em; 
+  background: grey;
+}
+section.final {
+  background-image: url("../img/ramka.jpeg");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: cover;
 }
 
 /* wyróżnienia */
@@ -29,7 +53,7 @@ blockquote p {
 blockquote {
   padding: 25px;
   font-size: 22px;    
-  background: url(../images/quote_up.png) top left no-repeat;
+  background: url(../img/quote_up.jpeg) top left no-repeat;
 }
 
 cite {
@@ -43,6 +67,17 @@ ul.small-unordered-list li {
   line-height: 20px;
   color: blue;
 }
+
+/* obrazki */
+section#feathers img {
+  display: block;
+  width: 900px;
+  height: 700px;
+}
+
+
+
+
 
 
 
@@ -63,6 +98,12 @@ ul.small-unordered-list li {
     font-size: 48px;
     line-height: 1.5;
 }
+
+/* my own addition for better images in booklet */
+section#why-measure.step {
+  width: 1000px;
+}
+
 
 .impress-enabled .step {
     margin: 0;
@@ -101,23 +142,16 @@ ul.small-unordered-list li {
 
 /* borrowed section end */
 
-/* spans for distinction */
-span.notoryczne .mark {
-  color: blue;
-  opacity: 1;
-}
-
 /* flipbook styling */
-
 div#flipbook {
     overflow:hidden;
-    width: 800px;
-    height: 600px;
+    width: 1000px;
+    height: 650px;
 }
 
 #flipbook .page {
-    width: 750px;
-    height: 550px;
+    width: 900px;
+    height: 610px;
     background-color: white;
     line-height: 300px;
     font-size: 20px;
@@ -125,8 +159,8 @@ div#flipbook {
 }
 
 #flipbook img.page {
-    width: 750px;
-    height: 550px;
+    width: 800px;
+    height: 600px;
 }
 
 #flipbook .page-wrapper{
@@ -138,8 +172,12 @@ div#flipbook {
 }
 
 #flipbook .hard{
-    background:#ccc !important;
-    color:#333;
+  background-image: url("../img/why-measure.jpeg") !important;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+
     -webkit-box-shadow:inset 0 0 5px #666;
     -moz-box-shadow:inset 0 0 5px #666;
     -o-box-shadow:inset 0 0 5px #666;
@@ -148,8 +186,38 @@ div#flipbook {
     font-weight:bold;
 }
 
+p.booklet-title {
+  top: 130px;
+  position: relative;
+  font-size: 40px;
+  font-style: oblique;
+  text-align: center;
+}
+
+/* booklet toc */
+#flipbook .hard ol {
+  position: relative;
+  right: 140px;
+}
 #flipbook .hard li {
-    line-height: 50px;
+  line-height: 50px;
+}
+
+#flipbook .top {
+  line-height: 50px;
+  position: relative;
+  top: 20px;
+}
+#flipbook .middle {
+  line-height: 50px;
+  position: relative;
+  top: 120px;
+}
+#flipbook .bottom {
+  line-height: 50px;
+  position: relative;
+  top: 200px;
+  bottom: 20px;
 }
 
 #flipbook .odd{
@@ -179,3 +247,48 @@ div#flipbook {
     -ms-box-shadow:inset 0 0 5px #666;
     box-shadow:inset 0 0 5px #666;
 }
+
+/* image gallery for code city and sonar tree map - thanks to Deluxe Blog Tips */
+
+    #cc-gallery {
+    width: 700px;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    }
+    #cc-gallery img {
+    width: 700px;
+    height: 550px;
+    position: absolute;
+    top: 0;
+    left: -700px;
+    }
+    #cc-gallery img:first-child {
+    left: 0;
+    }
+    #slider a {
+    text-decoration: none;
+    background: #E3F1FA;
+    border: 1px solid #C6E4F2;
+    padding: 4px 6px;
+    color: #222;
+    }
+    #slider a:hover {
+    background: #C6E4F2;
+    }
+
+/* transition */
+    #cc-gallery img {
+    z-index: 1;
+    opacity: 0;
+    transition: all linear 1s;
+    -o-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -webkit-transition: all linear 1s;
+    }
+    #cc-gallery img:target {
+    left: 0;
+    z-index: 9;
+    opacity: 1;
+    }
